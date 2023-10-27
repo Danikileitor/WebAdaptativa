@@ -1,15 +1,155 @@
 * {
-    cursor: url(http://www.rw-designer.com/cursor-extern.php?id=145402), auto;
+  cursor: url(http://www.rw-designer.com/cursor-extern.php?id=145402), auto;
+  font-family: "Montserrat", sans-serif;
 }
 
-a, [type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
-    cursor: url(http://www.rw-designer.com/cursor-extern.php?id=145415), auto;
+a,
+a > *,
+.social img,
+button > span,
+[type="button"]:not(:disabled),
+[type="reset"]:not(:disabled),
+[type="submit"]:not(:disabled),
+button:not(:disabled) {
+  cursor: url(http://www.rw-designer.com/cursor-extern.php?id=145415), auto;
 }
 
-#carouselId{
-    padding-bottom: 50px;
+main,
+footer > :first-child {
+  background-color: #eeeeee;
+  margin-bottom: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2), 0 0 1px rgba(0, 0, 0, 0.2);
+  padding-bottom: 12px;
 }
 
-main {
-    background-color: #eeeeee;
+main > :first-child,
+footer .donde-estamos {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.container > .row {
+  margin-bottom: 5px;
+}
+
+.carousel-control-prev {
+  justify-content: left;
+  padding-left: 10px;
+  width: 70px;
+}
+
+.carousel-control-next {
+  justify-content: right;
+  padding-right: 10px;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 27px;
+}
+
+h3 {
+  font-weight: normal;
+  font-size: 20px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.boton-rojo {
+  color: white;
+  background-color: red;
+  font-size: 14px;
+  padding: 6px 12px 6px 12px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  border: none;
+  transition: 0.3s;
+  margin-bottom: 10px;
+}
+
+.boton-rojo:hover {
+  color: red;
+  background-color: white;
+  font-size: 14px;
+  padding: 6px 12px 6px 12px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.galeria > a div {
+  width: 230px;
+  height: 312px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.carousel {
+  padding: 0;
+}
+
+.nav-link {
+  color: black;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.social {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.social img,
+.contacto a img {
+  width: 30px;
+  height: 30px;
+  margin: 10px 2px 2px 2px;
+}
+
+footer .social {
+  justify-content: flex-start;
+}
+
+footer.row > * {
+  margin-top: 5px;
+}
+
+.contacto p,
+.contacto td {
+  margin: auto;
+  font-size: 14px;
+}
+
+.contacto a {
+  color: black;
+  text-decoration-line: none;
+  transition: 0.3s;
+}
+
+.contacto a:hover {
+  color: red;
+}
+
+.contacto td {
+  vertical-align: middle;
+  padding: 2px;
+}
+
+.contacto td img {
+  margin: auto;
+}
+
+iframe {
+  max-width: 100%;
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media print {
 }
