@@ -7,7 +7,6 @@
   --bcolor: #eee;
   --ffMontserrat: "Montserrat", sans-serif;
   --ffGeorgia: Georgia, serif;
-
 }
 
 * {
@@ -42,7 +41,7 @@ footer .donde-estamos h2 {
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 
-.container > .row {
+.container-lg > .row {
   margin-bottom: 5px;
 }
 
@@ -281,10 +280,17 @@ iframe {
   font-weight: 600;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 320px) {
+  body .social:first-child {
+    display: none;
+  }
 }
 
 @media (min-width: 768px) {
+  body .social:first-child {
+    display: flex;
+  }
+
   .otros div div + div {
     display: block;
   }
@@ -298,6 +304,10 @@ iframe {
 }
 
 @media print {
+  body .social:first-child,
+  .carousel span {
+    display: none;
+  }
 }
 
 .container-lg {
