@@ -1,6 +1,18 @@
+:root {
+  --hcolor: red;
+  --peque: 14px;
+  --max-ancho: 1250px;
+  --puntero-normal: url(http://www.rw-designer.com/cursor-extern.php?id=145402), auto;
+  --puntero-enlace: url(http://www.rw-designer.com/cursor-extern.php?id=145415), auto;
+  --bcolor: #eee;
+  --ffMontserrat: "Montserrat", sans-serif;
+  --ffGeorgia: Georgia, serif;
+
+}
+
 * {
-  cursor: url(http://www.rw-designer.com/cursor-extern.php?id=145402), auto;
-  font-family: "Montserrat", sans-serif;
+  cursor: var(--puntero-normal);
+  font-family: var(--ffMontserrat);
 }
 
 a,
@@ -11,12 +23,12 @@ button > span,
 [type="reset"]:not(:disabled),
 [type="submit"]:not(:disabled),
 button:not(:disabled) {
-  cursor: url(http://www.rw-designer.com/cursor-extern.php?id=145415), auto;
+  cursor: var(--puntero-enlace);
 }
 
 main,
 footer .donde-estamos {
-  background-color: #eeeeee;
+  background-color: var(--bcolor);
   margin-bottom: 10px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2), 0 0 1px rgba(0, 0, 0, 0.2);
@@ -37,7 +49,6 @@ footer .donde-estamos h2 {
 .carousel-control-prev {
   justify-content: left;
   padding-left: 10px;
-  width: 70px;
 }
 
 .carousel-control-next {
@@ -58,13 +69,17 @@ h3 {
 }
 
 h4 {
-  color: red;
+  color: var(--hcolor);
+}
+
+h4 + h4 {
+  font-size: var(--peque);
 }
 
 .boton-rojo {
   color: white;
-  background-color: red;
-  font-size: 14px;
+  background-color: var(--hcolor);
+  font-size: var(--peque);
   padding: 6px 12px 6px 12px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   border: none;
@@ -73,9 +88,9 @@ h4 {
 }
 
 .boton-rojo:hover {
-  color: red;
+  color: var(--hcolor);
   background-color: white;
-  font-size: 14px;
+  font-size: var(--peque);
   padding: 6px 12px 6px 12px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
@@ -85,6 +100,11 @@ h4 {
   height: 312px;
   margin-top: 5px;
   margin-bottom: 5px;
+}
+
+.galeria > a div:hover {
+  -webkit-filter: brightness(30%);
+  filter: brightness(30%);
 }
 
 .carousel {
@@ -120,7 +140,7 @@ footer.row > * {
 .contacto p,
 .contacto td {
   margin: auto;
-  font-size: 14px;
+  font-size: var(--peque);
 }
 
 .contacto a {
@@ -130,7 +150,7 @@ footer.row > * {
 }
 
 .contacto a:hover {
-  color: red;
+  color: var(--hcolor);
 }
 
 .contacto td {
@@ -144,6 +164,10 @@ footer.row > * {
 
 iframe {
   max-width: 100%;
+}
+
+.donde-estamos p {
+  font-size: var(--peque);
 }
 
 .faq {
@@ -166,13 +190,13 @@ iframe {
 }
 
 .faq p {
-  font-family: Georgia, serif;
+  font-family: var(--ffGeorgia);
   font-size: 17px;
 }
 
 .faq a {
-  font-family: "Montserrat", sans-serif;
-  color: red;
+  font-family: var(--ffMontserrat);
+  color: var(--hcolor);
   text-decoration: none;
 }
 
@@ -189,7 +213,7 @@ iframe {
 
 .precios table {
   width: 95%;
-  font-size: 14px;
+  font-size: var(--peque);
 }
 
 .precios table tr:hover {
@@ -212,6 +236,47 @@ iframe {
   text-align: center;
 }
 
+.otros {
+  margin-top: 35px;
+}
+
+.otros div div + div {
+  display: none;
+}
+
+.otros h4 ~ p {
+  text-align: justify;
+  font-size: var(--peque);
+  max-width: 26em;
+}
+
+.quienes-somos p,
+.quienes-somos table {
+  font-size: var(--peque);
+}
+
+.quienes-somos p {
+  max-width: 74em;
+  text-align: justify;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.quienes-somos td {
+  border: 1px solid black;
+  padding: 0 0.19cm 0 0.2cm;
+}
+
+.quienes-somos h4 {
+  padding: 10px;
+}
+
+.quienes-somos div div div {
+  display: flex;
+  justify-content: center;
+  align-items: first baseline;
+}
+
 .negrita {
   font-weight: 600;
 }
@@ -220,10 +285,37 @@ iframe {
 }
 
 @media (min-width: 768px) {
+  .otros div div + div {
+    display: block;
+  }
 }
 
 @media (min-width: 992px) {
+  .container-lg {
+    max-width: var(--max-ancho);
+    padding: 0;
+  }
 }
 
 @media print {
+}
+
+.container-lg {
+  container-type: inline-size;
+  container-name: summary;
+}
+
+@container summary (max-width: 320px) {
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-size: 16px !important;
+  }
+
+  p,
+  a,
+  td {
+    font-size: 12px !important;
+  }
 }
